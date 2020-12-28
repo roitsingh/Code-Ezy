@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Ezy</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+     body{
+         margin: 0px;
+         padding: 0px;
+         display: flex;
+         flex-direction: column;
+     }
+     .nav{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         align-items: center;
+         background-color: burlywood;
+         font-size: 2rem;
+         height: 80px;
+     }
+     .list{
+         display: flex;
+         justify-content: space-between;
+        width: 55%;
+     }
+     .list a{
+         text-decoration: none;
+         color: black;
+     }
+     .signin{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+     .pagename{
+         font-size: 3rem;
+     }
+     .list a:hover{
+         color:white;
+         cursor: pointer;
+     }
+     .signin:hover{
+         color: white;
+     }
+     #main{
+         background-image: url('1.jpg');
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         height: 100vh;
+         color: white;
+     }
+     #signuppage{
+        float: right;
+        width: 25%;
+        background-color: rgb(166, 199, 199); 
+        color: black;
+        padding-left: 10px;
+        padding-right: 45px;
+        margin-right: 300px;
+        display: none;
+     }
+     .data{
+         display: flex;
+         flex-direction: column;
+     }
+     .signuphead{
+         text-align: center;
+          font-size: 3rem;
+
+     }
+     .btn{
+         text-align: center;
+     }
+     #loginpage{
+         text-align: center;
+         background-color: darkgray;
+         display: flex;
+         flex-direction: column;
+         color: black;
+         justify-content: space-between;
+         align-items: center;
+         height: 220px;
+         width: 200px;
+         float: right;
+         margin-right: 250px;
+         display: none;
+     }
+     .logindata{
+         margin: 5px;
+     }
+     .content{
+         text-align: center;
+         color: blanchedalmond;
+         float: left;
+         position: absolute;
+         top: 250px;
+         left: 200px;
+     }
+     .first{
+         font-size: 3rem;
+     }
+     .second{
+         font-size: 5rem;
+         font-weight: bold;
+     }
+     .enroll input{
+         padding:10px 100px;
+         margin-top: 25px;
+         background-color: coral;
+         border: none;
+         border-radius: 10px;
+         font-size: 2rem;
+     }
+     .enroll input:hover{
+         background-color: crimson;
+         color: white;
+     }
+     .foot{
+         text-align: center;
+         background-color:burlywood;
+     }
+     .foot h1{
+         margin: 0px;
+     }
+    </style>
+</head>
+<body>
+    <div id="codeezy">
+    <div class="nav">
+        <div class="pagename">Code Ezy</div>
+        <div class="list">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Courses</a>
+            <a onclick="toggle()">Join Now</a>
+            <div onclick="toggle2()" class="signin" >
+                <i class="fas fa-user-circle"></i>
+                <a>Sign In</a></div>
+            <a href="">Contact Us</a>
+        </div>
+    </div>
+    <div id="main">
+         <div id="signuppage">
+             <h2 class="signuphead">Sign Up</h2>
+             <div class="data">Name: <input type="text" placeholder="Enter Your Name"></div>
+             <div class="data">Father's Name: <input type="text" placeholder="Enter your Fathers name"></div>
+             <div class="data">Date of Birth: <input type="date" name="date" id=""></div>
+             <div class="data">Gender: <input type="radio" name="gender" id=""> Male <input type="radio" name="gender" id=""> Female <input type="radio" name="gender" id=""> Other</div>
+             <div class="data">Contact No. : <input type="number" name="contact" id=""></div>
+             <div class="data">Email: <input type="email" name="email" id=""></div>
+             <div class="data">Password: <input type="password" name="password" id=""></div>
+             <div class="data">Confirm Password: <input type="password" name="confirmpassword" id=""></div>
+             <div class="btn"><input type="button" value="Submit"></div>
+         </div>
+         <div id="loginpage">
+             <h2>Log In</h2>
+             <div class="logindata"> <input type="email" placeholder="Enter your Email"> </div>
+             <div class="logindata"><input type="password" name="password" id="" placeholder="Enter the password"></div>
+             <div class="logindata"><input type="button" value="Login"></div>
+         </div>
+         <div class="content">
+             <div class="first">Crack The Code</div>
+             <div class="second">With Code Ezy</div>
+             <div class="enroll"><input type="button" value="Enroll Now" onclick="toggle()"></div>
+         </div>
+    </div>
+    <footer class="foot">
+        <h1>Contact Us</h1>
+        <div class="address">Bari Yusufpur,Hajipur,(Vaishali)Bihar-844101</div>
+        <div class="mail">codeezy2020@gmail.com</div>
+        <div class="contact">06224-273156</div>
+    </footer>
+    </div>
+    <script>
+        function toggle(){
+            var x=document.getElementById('signuppage');
+            if(x.style.display=='none')
+            {
+                x.style.display='block';
+            }
+            else
+            {
+                x.style.display='none';
+            }
+        }
+        function toggle2(){
+            var x=document.getElementById('loginpage');
+            if(x.style.display=='none')
+            {
+                x.style.display='block';
+            }
+            else
+            {
+                x.style.display='none';
+            }
+        }
+    </script>
+</body>
+</html>
